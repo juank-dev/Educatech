@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Welcome to Educatech </span></h2>
+<p class="lead">
+  If you already have an account, go ahead and <a href="{% url 'login' %}">log in</a>. If you are new to Educatech
+  School Colombia, get started
+  by creating a <a href="{% url 'student_signup' %}">student account</a> or a <a
+    href="{% url 'teacher_signup' %}">teacher account</a>.
+</p>
+<hr>
+<h3>What's Educatech Colombia?</h3>
+<p>
+  write in this space path templates/classroom/home.html
+</p>
+<img
+  src="https://previews.123rf.com/images/pratyaksa/pratyaksa1610/pratyaksa161000027/66897412-aprender-en-línea-e-learning-educación-en-línea-educación-a-distancia-educación-curso-online.jpg"
+  alt="educatechImg" width="500" height="500">
+
+<p>Want to run this code locally? <a
+    href="https://github.com/sibtc/django-multiple-user-types-example/blob/master/README.md">Read detailed instructions
+    on how to run this project</a>.</p>
+<p class="mb-0">Juan Lopez - Marcela Sanchez - Sergio Quiroga<br><a
+    href="https://twitter.com/jclopezs100/">@jclopez100</a></p>
+{% endblock %}
