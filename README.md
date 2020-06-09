@@ -16,6 +16,11 @@ First, clone the repository to your local machine:
 ```bash
 git clone https://github.com/Juan-Bogota/Django-Chat-Educatech.git
 ```
+### Create virtual environment
+
+Review this [link](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/
+) 
+* Create a Virtual Environment
 
 ### Install the requirements:
 
@@ -28,7 +33,7 @@ pip3 install -r requirements.txt
 pip3 install https://ftp.postgresql.org/pub/pgadmin/pgadmin4/v4.17/pip/pgadmin4-4.17-py2.py3-none-any.whl
 ```
 #### Configure and run pgAdmin 4
-After completing the installation steps, you have to create a configuration file to run this software. Create a new file named ```config_local.py``` in lib/python3.6/site-packages/pgadmin4/ folder using favorite editor.
+After completing the installation steps,you have to open the folder of virtual enviroments, you have to create a configuration file to run this software. Create a new file named ```config_local.py``` in lib/python3.6/site-packages/pgadmin4/ folder using favorite editor.
 
 ```
 emacs lib/python3.6/site-packages/pgadmin4/config_local.py
