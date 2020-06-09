@@ -50,8 +50,20 @@ python3 lib/python3.6/site-packages/pgadmin4/pgAdmin4.py
 ```
 review pgAdmin in this [link](https://linuxhint.com/install-pgadmin4-ubuntu/)
 
-Create the database:
+## Create the database:
 
+#### open postgres
+
+```
+$ sudo -i -u postgres
+
+postgres$ psql
+
+postgres# CREATE DATABASE dbeducatech;
+
+```
+
+#### migrations
 ```
 python3 manage.py makemigrations classroom
 python3 manage.py makemigrations chat
