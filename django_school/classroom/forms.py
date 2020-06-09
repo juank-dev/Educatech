@@ -3,7 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.db import transaction
 from django.forms.utils import ValidationError
 
-from classroom.models import (Student,Subject, User)
+from classroom.models import (Teacher,Subject, User)
 
 
 class TeacherSignUpForm(UserCreationForm):
@@ -17,13 +17,17 @@ class TeacherSignUpForm(UserCreationForm):
         required=True
     )
     class Meta(UserCreationForm.Meta):
-        model = User 
+        model = User
+        fields = ('username', 'first_name','last_name','email','city', 'subject')
 
-    def save(self, commit=True):
+    @transaction.atomic
+    def save(self):
         user = super().save(commit=False)
+        print(user)
         user.is_teacher = True
-        if commit:
-            user.save()
+        user.save()
+        teacher = Teacher.objects.create(user=user)
+        teacher.interests.add(*self.cleaned_data.get('subject'))
         return user
 
 
@@ -34,22 +38,13 @@ class StudentSignUpForm(UserCreationForm):
     city = forms.CharField(max_length=32, help_text='City name')
     class Meta(UserCreationForm.Meta):
         model = User
+        fields = ('username', 'first_name','last_name','email','city')
 
     @transaction.atomic
     def save(self):
         user = super().save(commit=False)
         user.is_student = True
+        print(user)
         user.save()
-        student = Student.objects.create(user=user)
-        #student.interests.add(*self.cleaned_data.get('interests'))
         return user
-
-
-class StudentInterestsForm(forms.ModelForm):
-    class Meta:
-        model = Student
-        fields = ('interests', )
-        widgets = {
-            'interests': forms.CheckboxSelectMultiple
-        }
 

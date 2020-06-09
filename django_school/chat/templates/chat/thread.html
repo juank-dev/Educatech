@@ -1,7 +1,13 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h3>Thread for {% if user != object.first %}{{ object.first }}{% else %}{{ object.second }}{% endif %}</h3>
+<div class='row border-bottom my-4 py-0'>
+    <div class='col'>
+        <h1 class='p-1 m-2'>Chat Educatech</h1>
+    </div>
+</div>
+<h3> {% if user.is_teacher %}Student {% else %}Teacher
+    {% endif %}{% if user != object.first %}{{ object.first }}{% else %}{{ object.second }}{% endif %}</h3>
 <ul id='chat-items'>
     {% for chat in object.chatmessage_set.all %}
 

@@ -8,7 +8,6 @@ class SignUpView(TemplateView):
 
 def home(request):
     if request.user.is_authenticated:
-        print("autenticacion ok")
         if request.user.is_teacher:
             return redirect('teachers')
         else:
