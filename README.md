@@ -22,15 +22,18 @@ git clone https://github.com/Juan-Bogota/Django-Chat-Educatech.git
 ```bash
 pip3 install -r requirements.txt
 ```
-Install pgAdmin4
+#### Install pgAdmin4
 
 ```
-pip install https://ftp.postgresql.org/pub/pgadmin/pgadmin4/v4.17/pip/pgadmin4-4.17-py2.py3-none-any.whl
+pip3 install https://ftp.postgresql.org/pub/pgadmin/pgadmin4/v4.17/pip/pgadmin4-4.17-py2.py3-none-any.whl
 ```
 #### Configure and run pgAdmin 4
+After completing the installation steps, you have to create a configuration file to run this software. Create a new file named ```config_local.py``` in lib/python3.6/site-packages/pgadmin4/ folder using favorite editor.
 
+```
 emacs lib/python3.6/site-packages/pgadmin4/config_local.py
-
+```
+Add the following content in **config_local.py**.
 ```
 import os
 DATA_DIR = os.path.realpath(os.path.expanduser(u'~/.pgadmin/'))
@@ -41,7 +44,11 @@ STORAGE_DIR = os.path.join(DATA_DIR, 'storage')
 SERVER_MODE = False
 ```
 
-
+Now, use the following command to run pgAdmin.
+```
+python3 lib/python3.6/site-packages/pgadmin4/pgAdmin4.py
+```
+review pgAdmin in this [link](https://linuxhint.com/install-pgadmin4-ubuntu/)
 
 Create the database:
 
