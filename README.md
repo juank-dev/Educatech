@@ -1,7 +1,7 @@
 # Django School
 
 [![Python Version](https://img.shields.io/badge/python-3.6-brightgreen.svg)](https://python.org)
-[![Django Version](https://img.shields.io/badge/django-2.0-brightgreen.svg)](https://djangoproject.com)
+[![Django Version](https://img.shields.io/badge/django-3.0-brightgreen.svg)](https://djangoproject.com)
 
 This is an example project to illustrate an implementation of multiple user types. In this Django app, teachers can create quizzes and students can sign up and take quizzes related to their interests.
 
@@ -71,21 +71,21 @@ python3 manage.py makemigrations chat
 
 
 ```bash
-python manage.py migrate
+python3 manage.py migrate
 ```
 
 Finally, run the development server:
 
 ```bash
-python manage.py runserver
+python3 manage.py runserver
 ```
 
 The project will be available at **127.0.0.1:8000**.
 
 
 
-2. Open & Test Redis:
-    - open other Terminal
+## 2. Open & Test Redis:
+    - **Open other Terminal**
 
 
     - **Run redis-server**
