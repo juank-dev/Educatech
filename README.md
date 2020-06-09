@@ -85,11 +85,10 @@ The project will be available at **127.0.0.1:8000**.
 
 
 ## 2. Open & Test Redis:
-    - **Open other Terminal**
+- **Open other Terminal**
+- **Run redis-server**
 
-
-    - **Run redis-server**
-        ```
+```
         $ redis-server
         86750:C 08 Nov 08:17:21.431 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
         86750:M 08 Nov 08:17:21.433 * Increased maximum number of open files to 10032 (it was originally set to 256).
@@ -113,12 +112,11 @@ The project will be available at **127.0.0.1:8000**.
 
         86750:M 08 Nov 08:17:21.434 # Server started, Redis version 3.2.5
         86750:M 08 Nov 08:17:21.434 * The server is now ready to accept connections on port 6379
-
-        ```
-        
-    - **redis-cli ping**
-        ```
-        $ redis-cli ping
-        PONG
-        ```
-        **Close Redis** with `control` + `c` to quit
+```
+     
+- **redis-cli ping**
+```
+$ redis-cli ping
+PONG
+```
+- **Close Redis** with `control` + `c` to quit
