@@ -1,4 +1,5 @@
-# Django School
+# Educatech
+## Sharing the passion for knowledge and technology
 
 [![Python Version](https://img.shields.io/badge/python-3.6-brightgreen.svg)](https://python.org)
 [![Django Version](https://img.shields.io/badge/django-3.0-brightgreen.svg)](https://djangoproject.com)
