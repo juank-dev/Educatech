@@ -30,7 +30,6 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'channels',
     'crispy_forms',
-
     'chat',
     'classroom',
 ]
@@ -128,6 +127,9 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 
+#Media Files (images)
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Custom Django auth settings
 

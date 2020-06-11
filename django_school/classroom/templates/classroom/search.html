@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="col">
+    {% include 'classroom/snippets/search.html' with query=query %}
+    <hr>
+    <p><strong> Results for: {% if query %} {{query}} {% else %} All {% endif%} ({{ count }})</strong> </p>
+    {% include 'classroom/snippets/list.html'%}
+</div>
+{% endblock %}

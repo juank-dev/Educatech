@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
+{% block title %}Educatech Student{% endblock %}
 {% block content %}
-<html>
 
-<body>
+<h1>Profile Student</h1>
 
-    <h1>soy un estudiante</h1>
-</body>
-
-</html>
+<h2>Search Teacher</h2>
+<form action="/students/search/" method="GET">
+    <input type="text" name="search_teacher">
+    <input type="submit" value="Search">
+</form>
 {% endblock %}

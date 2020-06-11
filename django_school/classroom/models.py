@@ -1,6 +1,8 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
-
+from django.utils.text import slugify
+from django.db.models.signals import pre_save
+import uuid
 
 class User(AbstractUser):
     is_student = models.BooleanField(default=False)
@@ -13,14 +15,31 @@ class User(AbstractUser):
 
 class Subject(models.Model):
     name = models.CharField(max_length=30)
+    description = models.TextField()
+    price = models.IntegerField()
+    slug = models.SlugField(null = False, blank = False, unique = True)
+    image = models.ImageField(upload_to='subjects/', null=False, blank=False)
+    created_at = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
         return self.name
 
+def set_slug(sender, instance, *args, **kargs):
+    if instance.name and not instance.slug:
+        slug = slugify(instance.name)
+
+        while Subject.objects.filter(slug=slug).exists():
+            slug = slugify(
+                '{}-{}'.format(instance.name, str(uuid.uuid4())[:8])
+            )
+
+        instance.slug = slug
+
+pre_save.connect(set_slug, sender=Subject)
    
 class Teacher(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
     interests = models.ManyToManyField(Subject, related_name='subject_teacher')
 
     def __str__(self):
-        return self.user.username
+        return "{}: {}".format(self.user, self.interests)

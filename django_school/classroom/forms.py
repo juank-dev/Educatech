@@ -23,7 +23,6 @@ class TeacherSignUpForm(UserCreationForm):
     @transaction.atomic
     def save(self):
         user = super().save(commit=False)
-        print(user)
         user.is_teacher = True
         user.save()
         teacher = Teacher.objects.create(user=user)
@@ -44,7 +43,6 @@ class StudentSignUpForm(UserCreationForm):
     def save(self):
         user = super().save(commit=False)
         user.is_student = True
-        print(user)
         user.save()
         return user
 
