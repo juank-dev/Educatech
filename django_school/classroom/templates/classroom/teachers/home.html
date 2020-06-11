@@ -1,11 +1,30 @@
 {% extends 'base.html' %}
 {% block content %}
-<html>
 
-<body>
 
-    <h1>soy un profe</h1>
-</body>
+<h1>Profile Teacher</h1>
+<h2>{{teacher.first_name|title}} {{teacher.last_name|title}}</h2>
+<img src="https://www.enriquedans.com/wp-content/uploads/2017/10/Professor.jpg" alt="Picture Teacher" width="200"
+    height="200" title="{{teacher.first_name|title}} {{teacher.last_name|title}}">
+<h4>Username: {{teacher.username}}</h4>
+<h4>Email: {{teacher.email}}</h4>
+<h4>City: {{teacher.city|title}}</h4>
+<h4>Last Login: {{teacher.last_login}}</h4>
+<h4>Subject</h4>
+{% for sub in subject %}
+<ul>
+    <li>{{sub}}</li>
+</ul>
+{% endfor %}
 
-</html>
+<h4>Experience</h4>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis magni veritatis facere quia delectus. Recusandae
+    nihil incidunt, aspernatur nostrum veniam aliquam, ullam accusamus atque, alias expedita nisi molestias illum
+    dignissimos!</p>
+
+<h3>My Classes</h3>
+
+
+
+
 {% endblock %}

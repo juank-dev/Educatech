@@ -12,7 +12,7 @@ from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
 
 from ..decorators import teacher_required
 from ..forms import TeacherSignUpForm
-from ..models import User
+from ..models import User, Subject, Teacher
 
 
 class TeacherSignUpView(CreateView):
@@ -32,6 +32,7 @@ class TeacherSignUpView(CreateView):
 @login_required
 @teacher_required
 def homepage(request):
-    return render(request, 'classroom/teachers/home.html')
+    sub = Teacher.objects.filter(user=request.user.id)[0].interests.all()
+    return render(request, 'classroom/teachers/home.html', {'teacher': request.user, 'subject':sub} )
 
 
