@@ -4,8 +4,10 @@
 
 <h1>Profile Teacher</h1>
 <h2>{{teacher.first_name|title}} {{teacher.last_name|title}}</h2>
-<img src="https://www.enriquedans.com/wp-content/uploads/2017/10/Professor.jpg" alt="Picture Teacher" width="200"
-    height="200" title="{{teacher.first_name|title}} {{teacher.last_name|title}}">
+
+<img src="http://127.0.0.1:8000/media/{{teacher.image_profile}}" alt="Picture Teacher" width="200" height="200"
+    title="{{teacher.first_name|title}} {{teacher.last_name|title}}">
+
 <h4>Username: {{teacher.username}}</h4>
 <h4>Email: {{teacher.email}}</h4>
 <h4>City: {{teacher.city|title}}</h4>
@@ -18,11 +20,14 @@
 {% endfor %}
 
 <h4>Experience</h4>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis magni veritatis facere quia delectus. Recusandae
-    nihil incidunt, aspernatur nostrum veniam aliquam, ullam accusamus atque, alias expedita nisi molestias illum
-    dignissimos!</p>
+<p>{{teacher.description}}</p>
 
 <h3>My Classes</h3>
+<ul>
+    <li>
+
+    </li>
+</ul>
 
 
 

@@ -42,7 +42,7 @@ def search(request):
 class ProductListView(ListView):
     template_name = 'app2.html'
     queryset = Subject.objects.all().order_by('id')
-
+    
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['message'] = 'List of Subjects'
@@ -52,7 +52,9 @@ class ProductListView(ListView):
 
 class ProductDetailView(DetailView):
     model = Subject
-    template_name = 'subjects.html'
+    template_name = 'classroom/subjects.html'
+
+
 
 class ProductSearchListView(ListView):
     

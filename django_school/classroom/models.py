@@ -11,11 +11,12 @@ class User(AbstractUser):
     last_name = models.CharField(max_length=32)
     email = models.EmailField(max_length=64)
     city = models.CharField(max_length=32, null=True)
-
+    image_profile = models.ImageField(upload_to='profile/', null=True, blank=True)
+    description = models.TextField(null = True, blank = True)
 
 class Subject(models.Model):
     name = models.CharField(max_length=30)
-    description = models.TextField()
+    description = models.TextField(null = True)
     price = models.IntegerField()
     slug = models.SlugField(null = False, blank = False, unique = True)
     image = models.ImageField(upload_to='subjects/', null=False, blank=False)
