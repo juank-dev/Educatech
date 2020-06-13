@@ -11,9 +11,9 @@ class SignUpView(TemplateView):
 def home(request):
     if request.user.is_authenticated:
         if request.user.is_teacher:
-            messages.success(request, 'Welcome Teacher {}'.format(request.user.username))
-            return redirect('teachers')
+            messages.success(request, 'Welcome Teacher {} {}'.format(request.user.first_name, request.user.last_name))
+            return redirect('teachers:teachers')
         else:
-            messages.success(request, 'Welcome Student {}'.format(request.user.username))
-            return redirect('students')
+            messages.success(request, 'Welcome Student {} {}'.format(request.user.first_name, request.user.last_name))
+            return redirect('students:students')
     return render(request, 'classroom/home.html')

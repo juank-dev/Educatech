@@ -12,18 +12,6 @@
 <img src="https://pbs.twimg.com/profile_images/1190306174643703810/Kpad9Nmp_400x400.jpg" alt="Picture Teacher"
     width="200" height="200" title="{{teacher.first_name|title}} {{teacher.last_name|title}}">
 {% endif %}
-<form action="{% url 'teachers:quiz_change_list' %}">
-
-    <div class="input-group">
-
-        <div class="card-body d-flex">
-
-
-            <input type="submit" name="" value="Quizzes" class="btn btn-danger btn-lg">
-        </div>
-    </div>
-</form>
-
 <h4>Username: {{teacher.username}}</h4>
 <h4>Email: {{teacher.email}}</h4>
 <h4>City: {{teacher.city|title}}</h4>
@@ -40,26 +28,21 @@
 <h4>Experience</h4>
 <p>{{teacher.description}}</p>
 
-<h3>My Classes</h3>
-{% for name in student %}
-<ul>
-    <li>
-        <strong>{{name.user.first_name}} {{name.user.last_name}}</strong>
-        <form action="http://127.0.0.1:8000/messages/{{name.user}}/">
-
-            <div class="input-group">
-
-                <div class="card-body d-flex">
-                    <input type="submit" name="" value="Chat" class="btn btn-dark btn-sm">
-                </div>
-
-            </div>
-        </form>
-    </li>
-</ul>
-{% endfor %}
+<div class="card-body d-flex">
+    <button id="back" type="submit" name="" value="Back" class="btn btn-dark btn-sm ml-auto">Back</button>
+</div>
 
 
+
+{% endblock %}
+{% block script %}
+<script>
+    let boton = document.getElementById("back");
+    boton.addEventListener("click", function () {
+        window.history.back();
+    }
+        , false);
+</script>
 
 
 {% endblock %}

@@ -1,11 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class='row border-bottom my-4 py-0'>
-    <div class='col'>
-        <h1 class='p-1 m-2'>Chat Educatech</h1>
+
+<form action="{% url 'students:students' %}">
+
+    <div class="input-group">
+        <div class='row border-bottom my-4 py-0'>
+            <div class='col'>
+                <h1 class='p-1 m-2'>Chat Educatech</h1>
+            </div>
+        </div>
+
+
     </div>
-</div>
+
+</form>
+<button id="back" type="submit" name="" value="Back" class="btn btn-dark btn-sm ml-auto">Back</button>
+
 <h3> {% if user.is_teacher %}Student {% else %}Teacher
     {% endif %}{% if user != object.first %}{{ object.first }}{% else %}{{ object.second }}{% endif %}</h3>
 <ul id='chat-items'>
@@ -21,6 +32,20 @@
     {{form.as_p }}
     <input type='submit' class='btn btn-primary' />
 </form>
+<form action="https://meet.jit.si/{{ object.first }}" target="_blank">
+
+    <div class="input-group">
+
+        <div class="card-body d-flex">
+
+            <input type="submit" name="" value="Link Video Chat" class="btn btn-dark btn-sm">
+        </div>
+
+    </div>
+    </div>
+
+</form>
+
 
 {% endblock %}
 
@@ -70,5 +95,10 @@
         console.log("mclose", e)
     }
 
+    let boton = document.getElementById("back");
+    boton.addEventListener("click", function () {
+        window.history.back();
+    }
+        , false);
 </script>
 {% endblock %}

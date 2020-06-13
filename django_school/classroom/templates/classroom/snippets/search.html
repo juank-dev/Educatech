@@ -1,6 +1,20 @@
-<form action="{% url 'search' %}">
+<form action="{% url 'students:quiz_list' %}">
+
     <div class="input-group">
-        <input type="text" name="q" value="{{ query }}" class="form-control" placeholder="Search">
+
+        <div class="input-group-append">
+
+            <input type="submit" name="" value="View Quizzes" class="btn btn-danger btn-lg">
+        </div>
+
+    </div>
+</form>
+<h2 class="text-center font-weight-bold">List of Subjects</h2>
+<br>
+<form action="{% url 'students:search' %}">
+
+    <div class="input-group">
+        <input type="text" name="q" class="form-control" placeholder="Search">
         <div class="input-group-append">
 
             <input type="submit" name="" value="Search" class="btn btn-primary">

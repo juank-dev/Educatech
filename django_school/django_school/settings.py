@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'django_school.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dbeducatech',
+        'NAME': 'educatech3',
         'USER': 'postgres',
         'PASSWORD': 'holberton',
         'HOST': '127.0.0.1',
