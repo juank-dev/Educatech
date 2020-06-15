@@ -29,20 +29,19 @@
         <li>
             {{ p.user.first_name }} {{ p.user.last_name }}
 
-            <form action="http://127.0.0.1:8000/messages/{{p.user}}/">
+            <form action="http://www.educatech.tech/messages/{{p.user}}/">
 
                 <div class="input-group">
 
                     <div class="card-body d-flex">
 
-                        <input type="hidden" id="custId" name="custId" value="3487">
                         <input type="submit" name="" value="Chat" class="btn btn-dark btn-sm">
                     </div>
 
                 </div>
             </form>
 
-            <form action="http://127.0.0.1:8000/teachers/{{p.user}}/">
+            <form action="http://www.educatech.tech/teachers/{{p.user}}/">
 
                 <div class="input-group">
 

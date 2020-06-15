@@ -14,8 +14,8 @@ urlpatterns = [
     path('accounts/signup/teacher/', teachers.TeacherSignUpView.as_view(), name='teacher_signup'),
     path('messages/', include('chat.urls')),
 
-]
-
+]  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+ 
 
 
 if settings.DEBUG:
