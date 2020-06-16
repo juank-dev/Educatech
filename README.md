@@ -9,7 +9,7 @@ Our platform is aimed at topics and communities related to technology for exampl
 
 ##  Technology
 
-<p align="center"><img src="images/Technology.png" width="700"></p>
+<p align="center"><img src="images/Technology.jpg" width="700"></p>
 
 
 First, clone the repository to your local machine:
