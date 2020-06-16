@@ -14,11 +14,11 @@
     </div>
   {% endif %}
   <div class="row" style="width:500px; margin:0 250px; padding: 40px">
-        <form method="post" style="font-family: Antic, sans-serif;" style="height: 455px;margin: 0px 221px;background-color: rgba(255,255,255,0);">
+        <form method="post" style="font-family: Antic, sans-serif;" style="height: 455px;margin: 0px 221px;">
           {% csrf_token %}
             <h2 class="sr-only">Log in</h2>
             <div class="illustration">
-                <h1 style="font-family: 'Homemade Apple', cursive;color: rgb(241,244,71);">Welcome back!</h1>
+                <h1 style="font-family: 'Homemade Apple', cursive;color: rgb(241,244,71); padding: 30px 30px;">Welcome back!</h1>
             </div>
             {{ form.username|as_crispy_field }}
             {{ form.password|as_crispy_field }}
