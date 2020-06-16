@@ -4,20 +4,19 @@
 
         <div class="input-group-append">
 
-            <input type="submit" name="" value="View Quizzes" class="btn btn-danger btn-lg">
+            <input type="submit" style="font-family: Antic, sans-serif;" name="" value="View Quizzes" class="btn border rounded border-dark btn-lg">
         </div>
 
     </div>
 </form>
-<h2 class="text-center font-weight-bold">List of Subjects</h2>
+<h1 class="text-center font-weight-bold" style="font-family: Antic, sans-serif;">Subjects</h1>
 <br>
 <form action="{% url 'students:search' %}">
-
     <div class="input-group">
         <input type="text" name="q" class="form-control" placeholder="Search">
         <div class="input-group-append">
 
-            <input type="submit" name="" value="Search" class="btn btn-primary">
+            <input type="submit" name="" value="Search" class="btn btn-search">
         </div>
     </div>
 </form>

@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="col">
+<div class="col" style="font-family: Antic, sans-serif;">
     {% include 'classroom/snippets/search.html' with query=query %}
     <hr>
-    <p><strong> Results for: {% if query %} {{query}} {% else %} All {% endif%} ({{ count }})</strong> </p>
+    <h5><strong> Results for: {% if query %} {{query}} {% else %} All {% endif%} ({{ count }})</strong></h5>
     {% include 'classroom/snippets/list.html'%}
 </div>
 {% endblock %}

@@ -61,6 +61,45 @@ footer a {
   border-color: #636474;
 }
 
+.btn-sign {
+  color: #fff;
+  background-color: #000000;
+  border-color: #000000;
+}
+
+.btn-sign:hover,
+.btn-sign:active {
+  color: #fff;
+  background-color: #636474;
+  border-color: #636474;
+}
+
+.btn-select {
+  color: #fff;
+  background-color: #000000;
+  border-color: #000000;
+}
+
+.btn-select:hover,
+.btn-select:active {
+  color: #fff;
+  background-color: #636474;
+  border-color: #636474;
+}
+
+.btn-search {
+  color: #fff;
+  background-color: #000000;
+  border-color: #000000;
+}
+
+.btn-search:hover,
+.btn-search:active {
+  color: #fff;
+  background-color: #636474;
+  border-color: #636474;
+}
+
 .has-danger .radio,
 .has-danger .checkbox {
   color: #dc3545;
