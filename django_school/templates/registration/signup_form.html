@@ -3,14 +3,14 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-  <div class="row">
-    <div class="col-md-8 col-sm-10 col-12">
-      <h2>Sign up as a {{ user_type }}</h2>
+  <div class="row justify-content-md-center">
+    <div class="col-md-6 col-sm-8 col-12" style="font-family: Antic, sans-serif;">
+      <h2><strong>Sign up as a {{ user_type }}</strong></h2>
       <form method="post" novalidate>
         {% csrf_token %}
         <input type="hidden" name="next" value="{{ next }}">
         {{ form|crispy }}
-        <button type="submit" class="btn btn-success">Sign up</button>
+        <button type="submit" class="btn btn-sign btn-lg">Sign up</button>
       </form>
     </div>
   </div>
