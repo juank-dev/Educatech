@@ -1,8 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2>Sign up</h2>
-<p class="lead">Select below the type of account you want to create</p>
-<a href="{% url 'student_signup' %}" class="btn btn-student btn-lg" role="button">I'm a student</a>
-<a href="{% url 'teacher_signup' %}" class="btn btn-teacher btn-lg" role="button">I'm a teacher</a>
+<div>
+    <div class="container">
+        <div class="row no-gutters row-cols-1 text-center d-flex flex-row-reverse flex-grow-1 flex-shrink-1 flex-fill justify-content-center align-items-center align-content-center" style="  height: 238px; padding: 0px; margin: 130px;">
+            <div class="col-md-10 offset-md-1" style="width: 60; height: 286px; margin: 0px;">
+                <h2 style="font-family:'Homemade Apple', cursive; color: rgb(241,244,71);height: 68px;">Join us</h2>
+                <p class="lead" style="font-family: Antic, sans-serif; color: #000000; height: 68px;">Select below the type of account you want to create</p>
+                <a href="{% url 'student_signup' %}" class="btn btn-student btn-lg" role="button">I'm a student</a>
+                <a href="{% url 'teacher_signup' %}" class="btn btn-teacher btn-lg" role="button">I'm a teacher</a>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

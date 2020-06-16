@@ -5,11 +5,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>{% block title %}Educatech School Colombia{% endblock %}</title>
+  <title>{% block title %}Educatech{% endblock %}</title>
   <link rel="icon" href="{% static 'img/favicon.png' %}">
-  <link href="https://fonts.googleapis.com/css?family=Clicker+Script" rel="stylesheet">
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Antic">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Homemade+Apple">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link rel="stylesheet" href="static/css/Navigation-with-Button.css">
+  <link rel="stylesheet" href="static/css/Pretty-Footer.css">
   <link rel="stylesheet" type="text/css" href="{% static 'vendor/fontello-2f186091/css/fontello.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'css/app.css' %}">
   {% if user.is_authenticated and user.is_teacher %}
@@ -19,7 +23,9 @@
   {% endif %}
 </head>
 
-<body>
+<body class="text-center" style="background: #f12711 no-repeat;fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #f5af19, #f12711);/*Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #f5af19, #f12711);*/">
   <a href="https://github.com/Juan-Bogota/Educatech" target="blank"><img
       style="position: absolute; top: 0; right: 0; border: 0;"
       src="https://juststickers.in/wp-content/uploads/2016/10/fork-me-on-github-badge.png" width="100" height="100"
@@ -31,59 +37,73 @@
         <div class="row">
           <div class="col-6">
             <h1 class="logo">
-              <a href="{% url 'home' %}">
-                Educatech
-                {% if user.is_authenticated %}
-                {% if user.is_teacher %}
-                <span class="icon-feather" data-toggle="tooltip" data-placement="right" title="Teacher profile"></span>
-                {% else %}
-                <span class="icon-graduation-cap" data-toggle="tooltip" data-placement="right"
-                  title="Student profile"></span>
-                {% endif %}
-                {% endif %}
-              </a>
+              <nav class="navbar navbar-light navbar-expand-md">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="{% url 'home' %}" style="font-size: 30px;font-family: 'Homemade Apple', cursive;">Educatech</a>
+                  {% if user.is_authenticated %}
+                  {% if user.is_teacher %}
+                  <span class="icon-feather" data-toggle="tooltip" data-placement="right" title="Teacher profile"></span>
+                  {% else %}
+                  <span class="icon-graduation-cap" data-toggle="tooltip" data-placement="right" title="Student profile"></span>
+                  {% endif %}
+                  {% endif %}
+                  <button class="navbar-toggler" data-toggle="collapse"><span class="sr-only">Toggle navigation</span>
+                    <span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navcol-1">
+            </nav>
+                
             </h1>
           </div>
           <div class="col-6 text-right">
             {% if user.is_authenticated %}
-            <p class="pt-3">Logged in as <strong>{{ user.username }}</strong>. <a href="{% url 'logout' %}">Log out</a>.
+            <p class="pt-3" style="font-family: Antic, sans-serif;">Logged in as <strong>{{ user.username }}</strong>. <a href="{% url 'logout' %}">Log out</a>.
             </p>
             {% else %}
-            <a href="{% url 'login' %}" class="btn btn-light" role="button">Log in</a>
-            <a href="{% url 'signup' %}" class="btn btn-primary" role="button">Sign up</a>
+            <a href="{% url 'login' %}" class="btn border rounded border-dark" style="font-family: Antic, sans-serif;" role="button">Log in</a>
+            <a href="{% url 'signup' %}" class="btn border rounded border-dark" style="font-family: Antic, sans-serif;" role="button">Sign up</a>
             {% endif %}
           </div>
         </div>
-        <div class="card mb-3">
-          <div class="card-body">
-            {% for message in messages %}
-            <div class="alert {{ message.tags }} alert-dismissible fade show" role="alert">
-              {{ message }}
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            {% endfor %}
-            {% block content %}
-            {% endblock %}
-          </div>
-        </div>
+
+       
+        {% block content %}
+        {% endblock %}
         <footer>
-          <a href="http://www.holbertonschool.com">www.holbertonschool.com</a>
-          /
-          <a
-            href="https://www.linkedin.com/in/juan-carlos-lopez-50698369/">Contact
-            us</a>
-          /
-          <a href="https://github.com/Juan-Bogota/Educatech">GitHub repository</a>
-        </footer>
-      </div>
-    </div>
-  </div>
+          <div class="row">
+              <div class="col-sm-6 col-md-4 footer-navigation">
+                  <h3><a class="text-secondary" href="#" style="font-family:'Homemade Apple', cursive;">Educatech</a></h3>
+                  <p style="  font-family: Antic, sans-serif;font-size: 15px;">Sharing the passion for knowledge and Technology</p>
+                  <p class="company-name">© 2020</p>
+              </div>
+              <div class="col-sm-6 col-md-4 footer-contacts">
+                  <div><span class="fa fa-map-marker footer-contacts-icon"></span>
+                      <p class="text-warning" style="  font-family: Antic, sans-serif;">Bogotá, Colombia</p>
+                  </div>
+                  <div><i class="fa fa-phone footer-contacts-icon"></i>
+                      <p class="text-warning footer-center-info email text-left" style="  font-family: Antic, sans-serif;">+57 313 428 5332</p>
+                  </div>
+                  <div style="  height: 75px;"><i class="fa fa-envelope footer-contacts-icon"></i>
+                      <p style="  font-size: 13px;"><a class="text-warning" href="#" target="_blank"></a></p>
+                      <ul class="list-unstyled" style="  font-family: Antic, sans-serif; font-size: 15px; margin: 0px 0px 16px; height: 7px; width: 182px; padding: 0;">
+                          <a class="text-warning" href="#" target="_blank">
+                              <li>970@holbertonschool.com</li>
+                              <li>1213@holbertonschool.com</li>
+                              <li>1230@holbertonschool.com</li>
+                          </a>
+                      </ul><a class="text-warning" href="#" target="_blank"></a>
+                      <p></p>
+                  </div>
+              </div>
+              <div class="clearfix"></div>
+              <div class="col-md-4 footer-about">
+                  <div class="d-lg-flex justify-content-center align-items-center align-content-center justify-content-lg-start social-links social-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-github"></i></a></div>
+              </div>
+          </div>
+      </footer>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script src="//stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   {% block script %}
   {% endblock %}
   <script type="text/javascript">
