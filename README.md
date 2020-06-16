@@ -15,7 +15,7 @@ Our platform is aimed at topics and communities related to technology for exampl
 First, clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/Juan-Bogota/Django-Chat-Educatech.git
+git clone https://github.com/Juan-Bogota/Educatech.git
 ```
 ### Create virtual environment
 
