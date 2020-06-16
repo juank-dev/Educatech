@@ -1,25 +1,73 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2>Welcome to Educatech </span></h2>
-<p class="lead">
-  If you already have an account, go ahead and <a href="{% url 'login' %}">log in</a>. If you are new to Educatech
-  School Colombia, get started
-  by creating a <a href="{% url 'student_signup' %}">student account</a> or a <a
-    href="{% url 'teacher_signup' %}">teacher account</a>.
-</p>
-<hr>
-<h3>What's Educatech Colombia?</h3>
-<p>
-  write in this space path templates/classroom/home.html
-</p>
-<img
-  src="https://previews.123rf.com/images/pratyaksa/pratyaksa1610/pratyaksa161000027/66897412-aprender-en-línea-e-learning-educación-en-línea-educación-a-distancia-educación-curso-online.jpg"
-  alt="educatechImg" width="500" height="500">
-
-<p>Want to run this code locally? <a
-    href="https://github.com/Juan-Bogota/Educatech">Read detailed instructions
-    on how to run this project</a>.</p>
-<p class="mb-0">Juan Lopez - Marcela Sanchez - Sergio Quiroga<br><a
-    href="https://twitter.com/jclopezs100/">@jclopez100</a></p>
+<img class="img-fluid" src="static/img/educatech-home.png" style="background: #232526;/* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #414345, #232526);/* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #414345, #232526);">
+<div class="container-fluid text-center text-warning justify-content-center align-content-center m-auto" style="width: 982px;height: 301px;margin: 0px 0px;padding: 60px;">
+  <h2 class="display-2 text-center text-warning" style="font-family: Antic;">Welcome!❤</h2>
+  <p class="lead text-center text-warning">Connect with the coolest technology education community, share your knowledge and be the best.&nbsp;</p>
+</div>
+<div class="container" style="height: 238px;width: 839px;">
+  <h1 class="text-warning" style="font-family: Antic, sans-serif;height: 72px;"><strong>What is Educatech?</strong><br></h1>
+  <p class="text-warning" style="font-family: Antic, sans-serif;font-size: 18px;">It is a community of people who are passionate about technology and who want to share their knowledge and offer the possibility to many to enter this world and face the future together in a society that is more and more immersed in technology
+      and be able to achieve that more people can develop competitively in the labor market in this field.</p>
+</div>
+<div style="height: 330px;">
+  <div class="container">
+      <div class="row row-cols-2 justify-content-center align-items-center">
+          <div class="col-md-6" data-bs-hover-animate="bounce" style="border-style: dotted;border-color: orange;"><i class="fa fa-laptop align-content-center" style="color: #e1f40d;height: 61px;font-size: 57px;"></i>
+              <h1 class="text-warning" style="height: 78px;font-family: Antic, sans-serif;"><strong>Classes</strong></h1>
+              <p class="text-warning" style="font-size: 18px;font-family: Antic, sans-serif;">Through a chat you can communicate with a teacher to learn your favorite topic, you can choose between different programming languages and technologies.<br></p>
+          </div>
+          <div class="col-md-6" data-bs-hover-animate="bounce" style="border-style: dotted;border-color: orange;"><i class="fa fa-vcard-o" style="color: #e1f40d;font-size: 57px;height: 61px;width: 61.0855px;"></i>
+              <h1 class="text-warning" style="height: 77px;font-family: Antic, sans-serif;"><strong>Teachers</strong></h1>
+              <p class="text-warning" style="font-family: Antic, sans-serif;font-size: 18px;">These are people from different parts of the world who are passionate about technology and will share their knowledge with you through our platform.</p>
+          </div>
+      </div>
+  </div>
+</div>
+<h1 class="display-4 text-warning" style="font-family: Antic, sans-serif;font-size: 50px;height: 85px;">Our amazing team</h1>
+<p class="text-center text-warning" style="font-size: 18px;height: 59px;">we believe that education can change the world</p>
+<div style="height: 204px;">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-4">
+              <div class="text-nowrap team-member"><img class="rounded-circle mx-auto" src="team/1.jpg">
+                  <h4 style="font-family: Antic, sans-serif;color: rgb(0,0,0);font-size: 22px;">Juan Carlos Lopéz</h4>
+                  <p style="font-family: Antic, sans-serif;color: rgb(0,0,0);">Back-end Enginner</p>
+                  <ul class="list-inline social-buttons">
+                      <li class="list-inline-item"><a href="twitter.com/jclopez100"><i class="fa fa-twitter" style="color: #000000;"></i></a></li>
+                      <li class="list-inline-item"><a href="https://github.com/juan-bogota"><i class="fa fa-github" style="color: #000000;"></i></a></li>
+                      <li class="list-inline-item"><a href="https://www.linkedin.com/in/juan-carlos-lopez-50698369/"><i class="fa fa-linkedin" style="color: rgb(0,0,0);"></i></a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="team-member"><img class="rounded-circle mx-auto" src="team/2.jpg">
+                  <h4 class="text-center" style="font-family: Antic, sans-serif;color: #000000;font-size: 22px;">Lady Marcela Sánchez</h4>
+                  <p style="font-family: Antic, sans-serif;color: rgb(0,0,0);">Front-end Enginner</p>
+                  <ul class="list-inline social-buttons">
+                      <li class="list-inline-item"><a href="https://twitter.com/MarceWp15"><i class="fa fa-twitter" style="color: rgb(0,0,0);"></i></a></li>
+                      <li class="list-inline-item"><a href="https://github.com/marcewp15"><i class="fa fa-github" style="color: rgb(0,0,0);"></i></a></li>
+                      <li class="list-inline-item"><a href="https://www.linkedin.com/in/lady-marcela-s%C3%A1nchez-moreno-277922184/"><i class="fa fa-linkedin" style="color: rgb(3,3,3);"></i></a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="text-nowrap team-member"><img class="rounded-circle mx-auto" src="team/3.jpg">
+                  <h4 style="font-family: Antic, sans-serif;color: #000000;font-size: 22px;">Sergio Andres Quiroga</h4>
+                  <p style="font-family: Antic, sans-serif;color: rgb(0,0,0);">Back-end Enginner</p>
+                  <ul class="list-inline social-buttons">
+                      <li class="list-inline-item"><a href="#"><i class="fa fa-twitter" style="color: rgb(0,0,0);"></i></a></li>
+                      <li class="list-inline-item"><a href="https://github.com/Sergioq7777"><i class="fa fa-github" style="color: rgb(0,0,0);"></i></a></li>
+                      <li class="list-inline-item"><a href="https://www.linkedin.com/in/sergio-andr%C3%A9s-quiroga-monroy-49255317b/"><i class="fa fa-linkedin" style="color: rgb(0,0,0);"></i></a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="container">
+<p><a href="https://github.com/Juan-Bogota/Educatech"><span style="text-decoration: underline;">Read detailed instructions on how to run and contribute to this project</span></a><br></p>
 {% endblock %}
