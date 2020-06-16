@@ -13,16 +13,17 @@
       </button>
     </div>
   {% endif %}
-  <div class="row">
-    <div class="col-lg-4 col-md-6 col-sm-8 col-12">
-      <h2>Log in</h2>
-      <form method="post" novalidate>
-        {% csrf_token %}
-        <input type="hidden" name="next" value="{{ next }}">
-        {{ form.username|as_crispy_field }}
-        {{ form.password|as_crispy_field }}
-        <button type="submit" class="btn btn-primary">Log in</button>
-      </form>
+  <div class="row" style="width:500px; margin:0 250px; padding: 40px">
+        <form method="post" style="font-family: Antic, sans-serif;" style="height: 455px;margin: 0px 221px;">
+          {% csrf_token %}
+            <h2 class="sr-only">Log in</h2>
+            <div class="illustration">
+                <h1 style="font-family: 'Homemade Apple', cursive;color: rgb(241,244,71); padding: 30px 30px;">Welcome back!</h1>
+            </div>
+            {{ form.username|as_crispy_field }}
+            {{ form.password|as_crispy_field }}
+            <div class="form-group"><button class="btn btn-login btn-lg btn-block" type="submit" style="font-family: Antic, sans-serif;">Log In</button></div>
+        </form>
     </div>
   </div>
 {% endblock %}
