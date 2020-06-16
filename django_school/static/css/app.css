@@ -1,12 +1,3 @@
-.logo {
-  font-family: 'Clicker Script', cursive;
-}
-
-.logo a {
-  color: #212529;
-  text-decoration: none;
-}
-
 footer {
   font-size: .9rem;
 }
@@ -33,28 +24,41 @@ footer a {
 
 .btn-student {
   color: #fff;
-  background-color: #91afb6;
-  border-color: #91afb6;
+  background-color: #000000;
+  border-color: #000000;
 }
 
 .btn-student:hover,
 .btn-student:active {
   color: #fff;
-  background-color: #608993;
-  border-color: #608993;
+  background-color: #636474;
+  border-color: #636474;
 }
 
 .btn-teacher {
   color: #fff;
-  background-color: #8980a5;
-  border-color: #8980a5;
+  background-color: #000000;
+  border-color: #000000;
 }
 
 .btn-teacher:hover,
 .btn-teacher:active {
   color: #fff;
-  background-color: #66598B;
-  border-color: #66598B;
+  background-color: #636474;
+  border-color: #636474;
+}
+
+.btn-login {
+  color: #fff;
+  background-color: #000000;
+  border-color: #000000;
+}
+
+.btn-login:hover,
+.btn-login:active {
+  color: #fff;
+  background-color: #636474;
+  border-color: #636474;
 }
 
 .has-danger .radio,
