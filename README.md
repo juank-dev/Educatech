@@ -6,10 +6,11 @@
 
 Our platform is aimed at topics and communities related to technology for example bases and foundations of programming, software, and hardware that allows the user in a more interactive way to have personalized advice, to communicate with a "teacher" through a chat or video call to facilitate contact, which is a plus in our product.
 <p align="center"><img src="images/home.jpeg" width="700"></p>
+
 ##  Technology
 
 <p align="center"><img src="images/Technology.png" width="700"></p>
-## Running the Project Locally
+
 
 First, clone the repository to your local machine:
 
