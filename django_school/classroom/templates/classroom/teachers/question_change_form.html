@@ -3,6 +3,7 @@
 {% load crispy_forms_tags crispy_forms_filters %}
 
 {% block content %}
+<div style="font-family: Antic;">
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="{% url 'teachers:quiz_change_list' %}">My Quizzes</a></li>
@@ -57,11 +58,12 @@
         </div>
     </div>
     <p>
-        <small class="form-text text-muted">Your question may have at least <strong>2</strong> answers and maximum
+        <small class="form-text">Your question may have at least <strong>2</strong> answers and maximum
             <strong>5</strong> answers. Select at least one correct answer.</small>
     </p>
-    <button type="submit" class="btn btn-success">Save changes</button>
-    <a href="{% url 'teachers:quiz_change' quiz.pk %}" class="btn btn-outline-secondary" role="button">Back</a>
+    <button type="submit" class="btn btn-dark">Save changes</button>
+    <a href="{% url 'teachers:quiz_change' quiz.pk %}" class="btn btn-outline-dark" role="button">Back</a>
     <a href="{% url 'teachers:question_delete' quiz.pk question.pk %}" class="btn btn-danger float-right">Delete</a>
 </form>
+</div>
 {% endblock %}

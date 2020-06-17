@@ -3,6 +3,7 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
+<div style="font-family: Antic;">
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="{% url 'teachers:quiz_change_list' %}">My Quizzes</a></li>
@@ -11,15 +12,15 @@
 </nav>
 <h2 class="mb-3">
     {{ quiz.name }}
-    <a href="{% url 'teachers:quiz_results' quiz.pk %}" class="btn btn-primary float-right">View results</a>
+    <a href="{% url 'teachers:quiz_results' quiz.pk %}" class="btn btn-danger btn-xs float-right">View results</a>
 </h2>
-<div class="row mb-3">
-    <div class="col-md-6 col-sm-8 col-12">
+<div class="row mb-3 container center-block">
+    <div class="col-md-6 col-sm-8 col-12" style="margin-left: 200px;">
         <form method="post" novalidate>
             {% csrf_token %}
             {{ form|crispy }}
-            <button type="submit" class="btn btn-success">Save changes</button>
-            <a href="{% url 'teachers:quiz_change_list' %}" class="btn btn-outline-secondary" role="button">Back</a>
+            <button type="submit" class="btn btn-dark">Save changes</button>
+            <a href="{% url 'teachers:quiz_change_list' %}" class="btn btn-outline-dark" role="button">Back</a>
             <a href="{% url 'teachers:quiz_delete' quiz.pk %}" class="btn btn-danger float-right">Delete</a>
         </form>
     </div>
@@ -55,7 +56,8 @@
         {% endfor %}
     </div>
     <div class="card-footer">
-        <a href="{% url 'teachers:question_add' quiz.pk %}" class="btn btn-primary btn-sm">Add question</a>
+        <a href="{% url 'teachers:question_add' quiz.pk %}" class="btn btn-dark btn-sm">Add question</a>
     </div>
+</div>
 </div>
 {% endblock %}

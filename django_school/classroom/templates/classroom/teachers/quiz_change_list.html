@@ -1,17 +1,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div style="font-family: Antic;">
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item active" aria-current="page">My Quizzes</li>
     </ol>
 </nav>
-<h2 class="mb-3">My Quizzes</h2>
+<h1 class="mb-3">My Quizzes</h1>
 
 <div class="card-body d-flex">
-    <button id="back" type="submit" name="" value="Back" class="btn btn-dark btn-sm ml-auto">Back</button>
+    <button id="back" type="submit" name="" value="Back" class="btn btn-dark btn-lg ml-auto">Back</button>
 </div>
-<a href="{% url 'teachers:quiz_add' %}" class="btn btn-primary mb-3" role="button">Add quiz</a>
+<a href="{% url 'teachers:quiz_add' %}" class="btn btn-dark btn-lg mb-3" role="button">Add quiz</a>
 <div class="card">
     <table class="table mb-0">
         <thead>
@@ -31,7 +32,7 @@
                 <td class="align-middle">{{ quiz.questions_count }}</td>
                 <td class="align-middle">{{ quiz.taken_count }}</td>
                 <td class="text-right">
-                    <a href="{% url 'teachers:quiz_results' quiz.pk %}" class="btn btn-primary">View results</a>
+                    <a href="{% url 'teachers:quiz_results' quiz.pk %}" class="btn btn-dark btn-sm">View results</a>
                 </td>
             </tr>
             {% empty %}
@@ -41,6 +42,7 @@
             {% endfor %}
         </tbody>
     </table>
+</div>
 </div>
 {% endblock %}
 {% block script %}
