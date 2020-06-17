@@ -4,18 +4,18 @@
 [![Python Version](https://img.shields.io/badge/python-3.6-brightgreen.svg)](https://python.org)
 [![Django Version](https://img.shields.io/badge/django-3.0-brightgreen.svg)](https://djangoproject.com)
 
-This is an example project to illustrate an implementation of multiple user types. In this Django app, teachers can create quizzes and students can sign up and take quizzes related to their interests.
+Our platform is aimed at topics and communities related to technology for example bases and foundations of programming, software, and hardware that allows the user in a more interactive way to have personalized advice, to communicate with a "teacher" through a chat or video call to facilitate contact, which is a plus in our product.
+<p align="center"><img src="images/home.jpeg" width="700"></p>
 
-![Django School Screenshot](https://simpleisbetterthancomplex.com/media/2018/01/teacher-quiz.png)
+##  Technology
 
-Read the blog post [How to Implement Multiple User Types with Django](https://simpleisbetterthancomplex.com/tutorial/2018/01/18/how-to-implement-multiple-user-types-with-django.html).
+<p align="center"><img src="images/Technology.jpg" width="700"></p>
 
-## Running the Project Locally
 
 First, clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/Juan-Bogota/Django-Chat-Educatech.git
+git clone https://github.com/Juan-Bogota/Educatech.git
 ```
 ### Create virtual environment
 
@@ -28,12 +28,12 @@ Review this [link](https://packaging.python.org/guides/installing-using-pip-and-
 ```bash
 pip3 install -r requirements.txt
 ```
-#### Install pgAdmin4
+#### Install pgAdmin4 (optional)
 
 ```
 pip3 install https://ftp.postgresql.org/pub/pgadmin/pgadmin4/v4.17/pip/pgadmin4-4.17-py2.py3-none-any.whl
 ```
-#### Configure and run pgAdmin 4
+#### Configure and run pgAdmin 4 (optional)
 After completing the installation steps,you have to open the folder of virtual enviroments, you have to create a configuration file to run this software. Create a new file named ```config_local.py``` in lib/python3.6/site-packages/pgadmin4/ folder using favorite editor.
 
 ```
