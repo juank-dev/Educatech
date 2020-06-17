@@ -3,6 +3,7 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
+<div style="font-family: Antic;">
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="{% url 'teachers:quiz_change_list' %}">My Quizzes</a></li>
@@ -10,12 +11,13 @@
         <li class="breadcrumb-item active" aria-current="page">Add a new question</li>
     </ol>
 </nav>
-<h2 class="mb-3">Add a new question</h2>
+<h2 class="mb-3"><strong>Add a new question</strong></h2>
 <p class="lead">Add first the text of the question. In the next step you will be able to add the possible answers.</p>
 <form method="post" novalidate>
     {% csrf_token %}
     {{ form|crispy }}
-    <button type="submit" class="btn btn-success">Save</button>
-    <a href="{% url 'teachers:quiz_change' quiz.pk %}" class="btn btn-outline-secondary" role="button">Back</a>
+    <button type="submit" class="btn btn-danger">Save</button>
+    <a href="{% url 'teachers:quiz_change' quiz.pk %}" class="btn btn-outline-dark role="button">Back</a>
 </form>
+</div>
 {% endblock %}

@@ -3,6 +3,7 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
+<div style="font-family: Antic;">
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="{% url 'teachers:quiz_change_list' %}">My Quizzes</a></li>
@@ -10,11 +11,12 @@
         <li class="breadcrumb-item active" aria-current="page">Confirm deletion</li>
     </ol>
 </nav>
-<h2 class="mb-3">Confirm deletion</h2>
+<h2 class="mb-3"><strong>Confirm deletion</strong></h2>
 <p class="lead">Are you sure you want to delete the quiz <strong>"{{ quiz.name }}"</strong>? There is no going back.</p>
 <form method="post">
     {% csrf_token %}
     <button type="submit" class="btn btn-danger btn-lg">Yes, I'm sure</button>
-    <a href="{% url 'teachers:quiz_change' quiz.pk %}" class="btn btn-outline-secondary btn-lg" role="button">Back</a>
+    <a href="{% url 'teachers:quiz_change' quiz.pk %}" class="btn btn-outline-dark btn-lg" role="button">Back</a>
 </form>
+</div>
 {% endblock %}
