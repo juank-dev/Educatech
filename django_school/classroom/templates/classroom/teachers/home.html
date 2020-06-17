@@ -7,7 +7,7 @@
     <h2>{{teacher.first_name|title}} {{teacher.last_name|title}}</h2>
 
     {% if teacher.image_profile %}
-    <img src="http://www.educatech.tech/media/{teacher.image_profile}}" alt="Picture Teacher" width="200" height="200"
+    <img src="http://www.educatech.tech/media/{{teacher.image_profile}}" alt="Picture Teacher" width="200" height="200"
     title="{{teacher.first_name|title}} {{teacher.last_name|title}}">
     {% else %}
     <img src="https://pbs.twimg.com/profile_images/1190306174643703810/Kpad9Nmp_400x400.jpg" alt="Picture Teacher"
@@ -53,7 +53,7 @@
 {% for name in student %}
 <ul class="list-inline mx-auto justify-content-center">
     <li style="list-style: none;">
-        <h4><strong>{{name.user.first_name}} {{name.user.last_name}}</strong></h4>
+        <h4><strong>{{name.user.first_name| title}} {{name.user.last_name|title}}</strong></h4>
         <form action="http://www.educatech.tech/messages/{{name.user}}/">
             <div class="container center-block input-group">
                 <div class="card-body d-flex" style="margin-left: 385px;">

@@ -16,7 +16,6 @@ class ChatConsumer(AsyncConsumer):
         print(other_user, me)
 
         thread_obj = await self.get_thread(me, other_user)
-        print(me, thread_obj.id)
         self.thread_obj = thread_obj
         chat_room = "thread_{}".format(thread_obj.id)
         self.chat_room = chat_room
@@ -27,7 +26,6 @@ class ChatConsumer(AsyncConsumer):
         await self.send({
             "type": "websocket.accept"
         })
-        #await asyncio.sleep(10)
         
 
     async def websocket_receive(self, event):
@@ -53,7 +51,6 @@ class ChatConsumer(AsyncConsumer):
                         "type": "chat_message",
                         "text": json.dumps(myResponse)
                     }
-                    #new_event
             )
 
 
@@ -65,11 +62,10 @@ class ChatConsumer(AsyncConsumer):
             "text": event['text']
         })
 
-        # receive  {'type': 'websocket.receive', 'text': '{"message":"hi"}'}
-
-
+    
     async def websocket_disconnect(self, event):
-        print("disconeected ", event)
+        # print("disconeected ", event)
+        pass
     
     @database_sync_to_async
     def get_thread(self, user, other_username):

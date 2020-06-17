@@ -64,7 +64,16 @@ background: linear-gradient(to bottom, #f5af19, #f12711);*/">
             {% endif %}
           </div>
         </div>
-
+	    <div class="card-body">
+          {% for message in messages %}
+          <div class="alert {{ message.tags }} alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+            </div>
+	    {% endfor %}
        
         {% block content %}
             {% endblock %}
@@ -105,19 +114,6 @@ background: linear-gradient(to bottom, #f5af19, #f12711);*/">
 	                    </div>
 		            </div>
 		        </div>
-	        </div>
-	        <div class="footer-bottom">
-	        	<div class="container">
-	        		<div class="row">
-	           			<div class="col footer-social">
-	                    	<a href="#"><i class="fab fa-facebook-f"></i></a> 
-							<a href="#"><i class="fab fa-twitter"></i></a> 
-							<a href="#"><i class="fab fa-google-plus-g"></i></a> 
-							<a href="#"><i class="fab fa-instagram"></i></a> 
-							<a href="#"><i class="fab fa-pinterest"></i></a>
-	                    </div>
-	           		</div>
-	        	</div>
 	        </div>
         </footer>
 	    <!-- Footer -->
