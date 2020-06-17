@@ -22,32 +22,6 @@ footer a {
   border-radius: .2rem;
 }
 
-.btn-student {
-  color: #fff;
-  background-color: #000000;
-  border-color: #000000;
-}
-
-.btn-student:hover,
-.btn-student:active {
-  color: #fff;
-  background-color: #636474;
-  border-color: #636474;
-}
-
-.btn-teacher {
-  color: #fff;
-  background-color: #000000;
-  border-color: #000000;
-}
-
-.btn-teacher:hover,
-.btn-teacher:active {
-  color: #fff;
-  background-color: #636474;
-  border-color: #636474;
-}
-
 .btn-login {
   color: #fff;
   background-color: #000000;
@@ -61,19 +35,6 @@ footer a {
   border-color: #636474;
 }
 
-.btn-sign {
-  color: #fff;
-  background-color: #000000;
-  border-color: #000000;
-}
-
-.btn-sign:hover,
-.btn-sign:active {
-  color: #fff;
-  background-color: #636474;
-  border-color: #636474;
-}
-
 .btn-select {
   color: #fff;
   background-color: #000000;
@@ -82,19 +43,6 @@ footer a {
 
 .btn-select:hover,
 .btn-select:active {
-  color: #fff;
-  background-color: #636474;
-  border-color: #636474;
-}
-
-.btn-search {
-  color: #fff;
-  background-color: #000000;
-  border-color: #000000;
-}
-
-.btn-search:hover,
-.btn-search:active {
   color: #fff;
   background-color: #636474;
   border-color: #636474;
