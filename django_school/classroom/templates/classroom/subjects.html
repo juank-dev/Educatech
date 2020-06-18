@@ -3,59 +3,50 @@
 {% block content %}
 <form action="{% url 'students:students' %}">
     <div class="input-group">
-        {% if subject.image %}
-        <img src="{{ subject.image.url }}" alt="Imagen del producto" width="200" height="100">
-        {% endif %}
+
         <div class="card-body d-flex">
             <input type="submit" name="" value="Back" class="btn btn-dark btn-sm ml-auto">
         </div>
     </div>
 </form>
-<div class="col">
-    <div class="h1">{{ subject.name }}
+<div class="card text-white bg-dark mb-3" style="max-width: 18rem; display:block; margin:auto;">
+    {% if subject.image %}
+    <img src=" {{ subject.image.url }}" alt="Imagen del producto" width="200" height="200" style="display:block;
+    margin:auto;">
+    {% endif %}
+    <div class="card-body">
+        <h3 class="card-title">{{ subject.name }}</h3>
         <div class="h5 font-weight-bold">
             Price: <span class="text-danger">${{ subject.price }}</span>
         </div>
-        <div class="h6">
-            <p>{{ subject.description }}</p>
-        </div>
-
+        <p class="card-text">{{ subject.description }}</p>
     </div>
+</div>
+<hr>
+
+
+<div class="row">
+
     {% for p in teacher %}
 
-    <ul>
-        <li>
-            <h2>{{ p.user.first_name }} {{ p.user.last_name }}</h2>
-
-            <form action="http://www.educatech.tech/messages/{{p.user}}/">
-
-                <div class="input-group">
-
-                    <div class="card-body d-flex">
-
-                        <input type="submit" name="" value="Chat" class="btn btn-dark btn-sm" style="margin-left:370px">
-                    </div>
-
-                </div>
-            </form>
-
-            <form action="http://www.educatech.tech/teachers/{{p.user}}/">
-
-                <div class="input-group">
-
-                    <div class="card-body d-flex">
-
-
-                        <input type="submit" name="" value="Profile" class="btn btn-dark btn-sm" style="margin-left:370px">
-                    </div>
-
-                </div>
-            </form>
-
-
-        </li>
-    </ul>
+    <div class="col-sm-6">
+        <div class="card" style="width:350px">
+            <div class="card-body">
+                {% if p.user.image_profile %}
+                <img class="card-img-top" src="http://www.educatech.tech/media/{{ p.user.image_profile }}"
+                    alt="Card image" width="100" height="200">
+                {% else %}
+                <img class="card-img-top" src="https://secure.meetupstatic.com/photos/event/a/d/4/f/600_480884367.jpeg"
+                    alt="Card image" width="100" height="200">
+                {% endif %}
+                <h5 class="card-title">{{ p.user.first_name|title }} {{ p.user.last_name|title }}</h5>
+                <a href="http://www.educatech.tech/messages/{{p.user}}/" class="btn btn-dark btn-sm">Chat</a>
+                <a href="http://www.educatech.tech/teachers/{{p.user}}/" class="btn btn-dark btn-sm">Profile</a>
+            </div>
+        </div>
+    </div>
 
     {% endfor %}
+    <hr>
 </div>
 {% endblock %}

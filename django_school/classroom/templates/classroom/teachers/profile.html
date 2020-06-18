@@ -3,8 +3,9 @@
 <div style="font-family: Antic;">
 
     <h1>Profile Teacher</h1>
+    <hr>
     <h2>{{teacher.first_name|title}} {{teacher.last_name|title}}</h2>
-
+    
     {% if teacher.image_profile %}
     <img src="http://www.educatech.tech/media/{{teacher.image_profile}}" alt="Picture Teacher" width="200" height="200"
         title="{{teacher.first_name|title}} {{teacher.last_name|title}}">
@@ -12,6 +13,7 @@
     <img src="https://pbs.twimg.com/profile_images/1190306174643703810/Kpad9Nmp_400x400.jpg" alt="Picture Teacher"
         width="200" height="200" title="{{teacher.first_name|title}} {{teacher.last_name|title}}">
     {% endif %}
+    <hr>
     <div class="table-responsive" style="padding: 30px; margin: 0px -15px;">
         <table class="table table-borderless text-center" style="border: none;">
             <tbody>
@@ -28,16 +30,18 @@
             </tbody>
         </table>
     </div>
+    <hr>
     <div class="container center-block">
         <h4>Subject</h4>
         {% for sub in subject %}
-        <div class="w-25 p-3" style="margin-left: 330px;">
+        <div class="w-25 p-3" style="margin-left: 320px;">
             <ul class="list-group list-group-flush">
                 <li class="list-group-item list-group-item-dark"><strong>{{sub}}</strong></li>
             </ul>
         </div>
         {% endfor %}
     </div>
+    <hr>
     <h4>Experience</h4>
     <p>{{teacher.description}}</p>
 
