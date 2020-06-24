@@ -11,17 +11,22 @@ from .models import Thread, ChatMessage
 
 
 class InboxView(LoginRequiredMixin, ListView):
+    """Inbox View for inside a chat room"""
     template_name = 'chat/inbox.html'
     def get_queryset(self):
         return Thread.objects.by_user(self.request.user)
 
 
 class ThreadView(LoginRequiredMixin, FormMixin, DetailView):
+    """In this class review the template name, query the thread the users, post the messages
+    and validate if the form is valid
+    """
     template_name = 'chat/thread.html'
     form_class = ComposeForm
     success_url = './'
 
     def get_queryset(self):
+        """Query the conversation by user"""
         return Thread.objects.by_user(self.request.user)
 
     def get_object(self):

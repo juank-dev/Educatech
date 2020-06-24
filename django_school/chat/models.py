@@ -6,13 +6,20 @@ from django.db.models import Q
 
 
 class ThreadManager(models.Manager):
+    
     def by_user(self, user):
+        """
+        Manager by user
+        """
         qlookup = Q(first=user) | Q(second=user)
         qlookup2 = Q(first=user) & Q(second=user)
         qs = self.get_queryset().filter(qlookup).exclude(qlookup2).distinct()
         return qs
 
-    def get_or_new(self, user, other_username): # get_or_create
+    def get_or_new(self, user, other_username):
+        """
+        get_or_create
+        """
         username = user.username
         if username == other_username:
             return None
@@ -37,6 +44,9 @@ class ThreadManager(models.Manager):
 
 
 class Thread(models.Model):
+    """Model Thread allow to know the users that to be connected(first, second) and the time of the thread (updated, timestamp)
+    setting.AUTH_USER_MODEL allow to know if the user is logged in
+    """
     first        = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='chat_thread_first')
     second       = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='chat_thread_second')
     updated      = models.DateTimeField(auto_now=True)
@@ -59,9 +69,11 @@ class Thread(models.Model):
 
 
 class ChatMessage(models.Model):
+    """
+    Model Chat Message allow view the thread of the users, what user send the messages, validate the user is logged in, and the
+    message of the chat in each thread or conversation and the time of the conversation
+    """
     thread      = models.ForeignKey(Thread, null=True, blank=True, on_delete=models.SET_NULL)
     user        = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name='sender', on_delete=models.CASCADE)
     message     = models.TextField()
     timestamp   = models.DateTimeField(auto_now_add=True)
-
-    
