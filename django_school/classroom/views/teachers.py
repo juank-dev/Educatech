@@ -1,3 +1,5 @@
+# Django
+# standard library
 from django.contrib import messages
 from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
@@ -9,11 +11,15 @@ from django.urls import reverse, reverse_lazy
 from django.utils.decorators import method_decorator
 from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
                                   UpdateView)
-
+# local Django
 from ..decorators import teacher_required
 from ..forms import BaseAnswerInlineFormSet, QuestionForm, TeacherSignUpForm
 from ..models import User, Subject, Teacher, Answer, Question, Quiz, Student
 
+"""
+    - Redirecting to the html template
+    - Model view to be controled by the urls and based on the models
+"""
 
 class TeacherSignUpView(CreateView):
     model = User
