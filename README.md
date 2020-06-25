@@ -161,3 +161,7 @@ We believe in the power of learning and sharing it, if you want to contribute to
 [Github](https://github.com/Sergioq7777) - [Twitter](https://twitter.com/sergioq7777) - [Linkedin](https://www.linkedin.com/in/sergio-andr%C3%A9s-quiroga-monroy-49255317b/) 
 
 1230@holbertonschool.com
+
+
+## License :pushpin:
+[MIT License](https://github.com/Juan-Bogota/Educatech/blob/master/LICENSE)
