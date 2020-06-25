@@ -9,6 +9,8 @@ In the world of technology we are in constant learning, many of us have dealt wi
 
 Our platform is aimed at technology-related topics and communities, for example, programming basics and fundamentals, software and hardware that allow the user to have a more interactive and personalized advice, communicate with a "teacher" through a chat or video call to facilitate contact, which is a plus in our product.
 
+
+
 We connect people through these personalized tutorials and advice, giving them the opportunity to improve and discover their skills in a collaborative community to make their way in the world of technology.
 
 ## The context :bulb:
