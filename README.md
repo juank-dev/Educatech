@@ -1,41 +1,48 @@
-# Educatech
-## Sharing the passion for knowledge and technology
-
+## Educatech
+### Sharing the passion for knowledge and technology
 [![Python Version](https://img.shields.io/badge/python-3.6-brightgreen.svg)](https://python.org)
 [![Django Version](https://img.shields.io/badge/django-3.0-brightgreen.svg)](https://djangoproject.com)
 
-Our platform is aimed at topics and communities related to technology for example bases and foundations of programming, software, and hardware that allows the user in a more interactive way to have personalized advice, to communicate with a "teacher" through a chat or video call to facilitate contact, which is a plus in our product.
+![educatech home page](https://picasaweb.google.com/101948693864846146267/6842325821286513905#6842325822700913618 "educatech home")
+In the world of technology we are in constant learning, many of us have dealt with the fact of being stuck with some particular subject and on the Internet we only find extensive texts or a thousand and one video tutorials explaining for hours that subject which is so difficult for us, how many times have we needed someone who in real time explains and guides us in these circumstances, we believe that most of the time we would like to have the possibility of having a personalized advice in this way and that is why we thought of creating Educatech.
+
+Our platform is aimed at technology-related topics and communities, for example, programming basics and fundamentals, software and hardware that allow the user to have a more interactive and personalized advice, communicate with a "teacher" through a chat or video call to facilitate contact, which is a plus in our product.
+
+We connect people through these personalized tutorials and advice, giving them the opportunity to improve and discover their skills in a collaborative community to make their way in the world of technology.
+
 <p align="center"><img src="images/home.jpeg" width="700"></p>
 
-##  Technology
+##  Technology :floppy_disk:
 
 <p align="center"><img src="images/Technology.jpg" width="700"></p>
 
+## Installation :heavy_check_mark:
 
 First, clone the repository to your local machine:
 
 ```bash
 git clone https://github.com/Juan-Bogota/Educatech.git
 ```
-### Create virtual environment
+#### Create virtual environment:
 
 Review this [link](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/
-) 
-* Create a Virtual Environment
+) to know how to create a Virtual Environment.
 
-### Install the requirements:
+#### Install the requirements:
 
 ```bash
 pip3 install -r requirements.txt
 ```
-#### Install pgAdmin4 (optional)
+#### Install pgAdmin4 (optional):
 
 ```
 pip3 install https://ftp.postgresql.org/pub/pgadmin/pgadmin4/v4.17/pip/pgadmin4-4.17-py2.py3-none-any.whl
 ```
-#### Configure and run pgAdmin 4 (optional)
-After completing the installation steps,you have to open the folder of virtual enviroments, you have to create a configuration file to run this software. Create a new file named ```config_local.py``` in lib/python3.6/site-packages/pgadmin4/ folder using favorite editor.
+#### Configure and run pgAdmin 4 (optional):
+After completing the installation steps, you have to: open the folder of virtual enviroments and create a configuration file to run this software.
+Create a new file named ```config_local.py``` in ```lib/python3.6/site-packages/pgadmin4/``` folder using favorite editor.
 
+For example:
 ```
 emacs lib/python3.6/site-packages/pgadmin4/config_local.py
 ```
@@ -54,11 +61,11 @@ Now, use the following command to run pgAdmin.
 ```
 python3 lib/python3.6/site-packages/pgadmin4/pgAdmin4.py
 ```
-review pgAdmin in this [link](https://linuxhint.com/install-pgadmin4-ubuntu/)
+review pgAdmin installation in this [link](https://linuxhint.com/install-pgadmin4-ubuntu/).
 
-## Create the database:
+#### Create the database:
 
-#### open postgres
+* open postgres:
 
 ```
 $ sudo -i -u postgres
@@ -69,17 +76,14 @@ postgres# CREATE DATABASE dbeducatech;
 
 ```
 
-#### migrations
+* migrations
 ```
 python3 manage.py makemigrations classroom
 python3 manage.py makemigrations chat
 ```
-
-
 ```bash
 python3 manage.py migrate
 ```
-
 Finally, run the development server:
 
 ```bash
@@ -90,9 +94,9 @@ The project will be available at **127.0.0.1:8000**.
 
 
 
-## 2. Open & Test Redis:
-- **Open other Terminal**
-- **Run redis-server**
+#### Open & Test Redis:
+- Open other Terminal
+- Run redis-server
 
 ```
         $ redis-server
@@ -120,9 +124,20 @@ The project will be available at **127.0.0.1:8000**.
         86750:M 08 Nov 08:17:21.434 * The server is now ready to accept connections on port 6379
 ```
      
-- **redis-cli ping**
+- redis-cli ping
 ```
 $ redis-cli ping
 PONG
 ```
-- **Close Redis** with `control` + `c` to quit
+- Close Redis with `control` + `c` to quit.
+
+## Contributing :raised_hands:
+
+We believe in the power of learning and sharing it, if you want to contribute to this project, feel free to make a pull-quest to help us improve or implement any feature.
+
+## Authors :smiley::computer:
+* Juan Carlos López [Github](https://github.com/Juan-Bogota) - [Twitter](https://twitter.com/jclopez100) - [Linkedin](https://www.linkedin.com/in/juan-carlos-lopez-50698369/) 1213@holbertonschool.com
+
+* Marcela Sánchez [Github](https://github.com/marcewp15) - [Twitter](https://twitter.com/MarceWp15) - [Linkedin](https://www.linkedin.com/in/lady-marcela-s%C3%A1nchez-moreno-277922184/) 970@holbertonschool.com
+
+* Sergio Quiroga [Github](https://github.com/Sergioq7777) - [Twitter](https://twitter.com/sergioq7777) - [Linkedin](https://www.linkedin.com/in/sergio-andr%C3%A9s-quiroga-monroy-49255317b/) 1230@holbertonschool.com
