@@ -22,7 +22,7 @@ We put a little bit of ourselves into this project so that it can help many peop
 
 Here we tell you a little more about what we experienced in this adventure by creating Educatech.
 
-* Juan Lopez's blog:
+* Juan Lopez's blog: [Click me](https://medium.com/@jclopez100/education-without-limits-88842dc7b996)
 * Marcela Sánchez's blog:
 * Sergio Quiroga's blog:
 
@@ -165,11 +165,25 @@ Here you can find the link of the [landing page](https://educatech-landpage.bss.
 
 * Log in / Sign up
 
-* Student's profile
+<p align="center"><img src="images/log in.PNG" width="400"></p>
+<p align="center"><img src="images/sign up.PNG" width="400"></p>
+
+
+* Search Subjects
+
+<p align="center"><img src="images/subjects.PNG" width="600"></p>
+
+* Teacher's profile
+
+<p align="center"><img src="images/profile.PNG" width="600"></p>
 
 * Quizzes
 
+<p align="center"><img src="images/quizzes.PNG" width="600"></p>
+
 * Chat Teacher - Student
+
+<p align="center"><img src="images/chat.PNG" width="600"></p>
 
 ## Contributing :raised_hands:
 
