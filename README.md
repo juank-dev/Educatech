@@ -3,7 +3,7 @@
 [![Python Version](https://img.shields.io/badge/python-3.6-brightgreen.svg)](https://python.org)
 [![Django Version](https://img.shields.io/badge/django-3.0-brightgreen.svg)](https://djangoproject.com)
 
-![educatech home page](https://picasaweb.google.com/101948693864846146267/6842325821286513905#6842325822700913618 "educatech home")
+
 In the world of technology we are in constant learning, many of us have dealt with the fact of being stuck with some particular subject and on the Internet we only find extensive texts or a thousand and one video tutorials explaining for hours that subject which is so difficult for us, how many times have we needed someone who in real time explains and guides us in these circumstances, we believe that most of the time we would like to have the possibility of having a personalized advice in this way and that is why we thought of creating Educatech.
 
 Our platform is aimed at technology-related topics and communities, for example, programming basics and fundamentals, software and hardware that allow the user to have a more interactive and personalized advice, communicate with a "teacher" through a chat or video call to facilitate contact, which is a plus in our product.
