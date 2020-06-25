@@ -11,6 +11,10 @@ Our platform is aimed at technology-related topics and communities, for example,
 
 We connect people through these personalized tutorials and advice, giving them the opportunity to improve and discover their skills in a collaborative community to make their way in the world of technology.
 
+## The context :bulb:
+This project is our final portfolio project, concluding our Foundations year at **Holberton School**. We were able to choose who we wanted to work with and what we wanted to work on, during about three weeks of development, we were able to create, implement, program our project, this helped us to discover and see in action all the potential of ourselves and our team, we put to the test the knowledge obtained during the first year, our tenacity, discipline, imagination, creativity and what we are capable of as programmers and as people. 
+We put a little bit of ourselves into this project so that it can help many people, just as Holberton and learning programming helped us. :hearts:
+
 ##  Technology :floppy_disk:
 
 <p align="center"><img src="images/Technology.jpg" width="700"></p>
@@ -140,10 +144,19 @@ PONG
 ```
 - Close Redis with `control` + `c` to quit.
 
-## Features
+## Features :dart:
+
+* Home page
 
 <p align="center"><img src="images/home.jpeg" width="700"></p> 
 
+* Log in / Sign up
+
+* Student's profile
+
+* Quizzes
+
+* Chat Teacher - Student
 
 ## Contributing :raised_hands:
 
