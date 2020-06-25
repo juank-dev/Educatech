@@ -16,6 +16,14 @@ We connect people through these personalized tutorials and advice, giving them t
 
 <p align="center"><img src="images/Technology.jpg" width="700"></p>
 
+## Architecture :rocket:
+
+The architecture in our web page is when the user enters our web page, it will validate that the domain is stored in the DNS servers and it will return an IPV4 so that it redirects to the server where our information is stored but the user can only see the Front End (HTML, CSS, JS [jQuery] ) and Bootstrap as css framework.
+
+Our page will take into account 2 types of users students and teachers, to use this service you need a user account. This information goes to our server and is stored in the database (Postgres), we used EC2 Instance contents AWS(Amazon Web Services) is a software platform that allows you to create, test and deploy applications quickly, Nginx as a web server that is when a user makes the request for access to a page, will be used as a web framework Django that allows easy integration with the database and APIs, Firewall that serves as security and restrict access to our server and monitoring for review of information in real-time and gunicorn for Deploy our project is a [Python](https://en.wikipedia.org/wiki/Python_(programming_language))  [Web Server Gateway Interface](https://en.wikipedia.org/wiki/Web_Server_Gateway_Interface) (WSGI) [HTTP server](https://en.wikipedia.org/wiki/Web_server) and the Gunicorn server is broadly compatible with Django Python web framework , simply implemented, light on server resources and fairly fast.
+
+If all goes well, the idea is to link students and teachers, so that they can communicate using our servers and carry out their activities.
+
 ## Installation :heavy_check_mark:
 
 First, clone the repository to your local machine:
