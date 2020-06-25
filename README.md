@@ -165,9 +165,9 @@ Here you can find the link of the [landing page](https://educatech-landpage.bss.
 
 * Log in / Sign up
 
-<p align="center"><img src="images/log in.PNG" width="400"></p>
-<p align="center"><img src="images/sign up.PNG" width="400"></p>
-
+<p align="center"><img src="images/log in.PNG" width="300">
+<img src="images/sign up.PNG" width="330" height="235">
+</p>
 
 * Search Subjects
 
