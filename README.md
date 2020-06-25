@@ -173,7 +173,7 @@ Here you can find the link of the [landing page](https://educatech-landpage.bss.
 
 ## Contributing :raised_hands:
 
-We believe in the power of learning and sharing it, if you want to contribute to this project, feel free to make a pull-quest to help us improve or implement any feature.
+We believe in the power of learning and sharing it, if you want to contribute to this project, feel free to make a pull-request to help us improve or implement any feature.
 
 ## Authors :smiley::computer:
 * Juan Carlos López
