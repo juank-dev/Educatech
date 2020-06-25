@@ -1,3 +1,5 @@
+# Django
+# standard library
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 from django.utils.text import slugify
@@ -5,6 +7,11 @@ from django.utils.html import escape, mark_safe
 from django.db.models.signals import pre_save
 import uuid
 
+"""
+- Creating the fields that we want to set in the DATABASE.
+- Each Class will be inhereted by the views
+- Here we set the features that each space will have
+"""
 class User(AbstractUser):
     is_student = models.BooleanField(default=False)
     is_teacher = models.BooleanField(default=False)
@@ -25,15 +32,18 @@ class Subject(models.Model):
     color = models.CharField(max_length=7, default='#007bff')
     
     def __str__(self):
+        """ With this function you will call the fiel with its own name"""
         return self.name
 
     def get_html_badge(self):
+        """ Here we set a few features to the fields of the subject class"""
         name = escape(self.name)
         color = escape(self.color)
         html = '<span class="badge badge-primary" style="background-color: %s">%s</span>' % (color, name)
         return mark_safe(html)
 
 def set_slug(sender, instance, *args, **kargs):
+    """ Setting a spefic name beside of the original name which is going to be unic"""
     if instance.name and not instance.slug:
         slug = slugify(instance.name)
 
@@ -51,6 +61,7 @@ class Teacher(models.Model):
     interests = models.ManyToManyField(Subject, related_name='subject_teacher')
 
     def __str__(self):
+        """ With this function you will call the fiel with its own name"""
         return "{}: {}".format(self.user, self.interests)
 
 class Quiz(models.Model):
@@ -67,6 +78,7 @@ class Question(models.Model):
     text = models.CharField('Question', max_length=255)
 
     def __str__(self):
+        """ With this function you will call the fiel with its own name"""
         return self.text
 
 
@@ -76,6 +88,7 @@ class Answer(models.Model):
     is_correct = models.BooleanField('Correct answer', default=False)
 
     def __str__(self):
+        """ With this function you will call the fiel with its own name"""
         return self.text
 
 
@@ -92,6 +105,7 @@ class Student(models.Model):
         return questions
 
     def __str__(self):
+        """ With this function you will call the fiel with its own name"""
         return self.user.username
 
 
@@ -103,5 +117,6 @@ class TakenQuiz(models.Model):
 
 
 class StudentAnswer(models.Model):
+    """ Set the students answer and delete the previous information"""
     student = models.ForeignKey(Student, on_delete=models.CASCADE, related_name='quiz_answers')
     answer = models.ForeignKey(Answer, on_delete=models.CASCADE, related_name='+')

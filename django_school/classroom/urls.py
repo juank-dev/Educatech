@@ -1,8 +1,11 @@
+# Django
 from django.urls import include, path
-
+# local Django
 from .views import classroom, students, teachers
 
-
+"""
+Setting the urls of the classroom file, which connect with the views
+"""
 urlpatterns = [
     path('', classroom.home, name='home'),
 

@@ -1,14 +1,19 @@
+# Django
+# standard library
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.db import transaction
 from django.forms.utils import ValidationError
 
+# local Django
 from classroom.models import (Answer, Question, Student, StudentAnswer,
                               Subject, User, Teacher)
 
-
+""" 
+  Here we set the fields which are going to take as a formulary, inheriting from fields of the models file  
+"""
 class TeacherSignUpForm(UserCreationForm):
-    
+
     subject = forms.ModelMultipleChoiceField(
         queryset=Subject.objects.all(),
         widget=forms.CheckboxSelectMultiple,
@@ -19,6 +24,7 @@ class TeacherSignUpForm(UserCreationForm):
         fields = ('username', 'first_name','last_name','email','city', 'subject', 'image_profile', 'description')
 
     @transaction.atomic
+    """ Decorator to save the subject as a teacher """
     def save(self):
         user = super().save(commit=False)
         user.is_teacher = True
@@ -27,7 +33,10 @@ class TeacherSignUpForm(UserCreationForm):
         teacher.interests.add(*self.cleaned_data.get('subject'))
         return user
 
-
+"""
+    - Setting the formulary fields
+    - Saving the data
+"""
 class StudentSignUpForm(UserCreationForm):
     interests = forms.ModelMultipleChoiceField(
         queryset=Subject.objects.all(),
@@ -41,6 +50,7 @@ class StudentSignUpForm(UserCreationForm):
 
     @transaction.atomic
     def save(self):
+        """ Decorator to save the subject as a stundent """
         user = super().save(commit=False)
         user.is_student = True
         user.save()
@@ -49,6 +59,7 @@ class StudentSignUpForm(UserCreationForm):
         return user
 
 class StudentInterestsForm(forms.ModelForm):
+    """ Setting the field of the students interest"""
     class Meta:
         model = Student
         fields = ('interests', )
@@ -58,12 +69,14 @@ class StudentInterestsForm(forms.ModelForm):
 
 
 class QuestionForm(forms.ModelForm):
+    """ Creating by text the questions formulary"""
     class Meta:
         model = Question
         fields = ('text', )
 
 
 class BaseAnswerInlineFormSet(forms.BaseInlineFormSet):
+    """ Cleaning the fields previously filled"""
     def clean(self):
         super().clean()
 
@@ -78,6 +91,7 @@ class BaseAnswerInlineFormSet(forms.BaseInlineFormSet):
 
 
 class TakeQuizForm(forms.ModelForm):
+    """ Formulary previously made by the teacher, to take the quiz by the student"""
     answer = forms.ModelChoiceField(
         queryset=Answer.objects.none(),
         widget=forms.RadioSelect(),
