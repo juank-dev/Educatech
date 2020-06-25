@@ -3,7 +3,7 @@
 [![Python Version](https://img.shields.io/badge/python-3.6-brightgreen.svg)](https://python.org)
 [![Django Version](https://img.shields.io/badge/django-3.0-brightgreen.svg)](https://djangoproject.com)
 
-<p align="center"><img src="images/educatech-home.png" width="700"></p>
+[<p align="center"><img src="images/educatech-home.png" width="700"></p>](http://www.educatech.tech)
 
 In the world of technology we are in constant learning, many of us have dealt with the fact of being stuck with some particular subject and on the Internet we only find extensive texts or a thousand and one video tutorials explaining for hours that subject which is so difficult for us, how many times have we needed someone who in real time explains and guides us in these circumstances, we believe that most of the time we would like to have the possibility of having a personalized advice in this way and that is why we thought of creating Educatech.
 
