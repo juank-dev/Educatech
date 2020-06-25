@@ -136,8 +136,20 @@ PONG
 We believe in the power of learning and sharing it, if you want to contribute to this project, feel free to make a pull-quest to help us improve or implement any feature.
 
 ## Authors :smiley::computer:
-* Juan Carlos López [Github](https://github.com/Juan-Bogota) - [Twitter](https://twitter.com/jclopez100) - [Linkedin](https://www.linkedin.com/in/juan-carlos-lopez-50698369/) 1213@holbertonschool.com
+* Juan Carlos López
 
-* Marcela Sánchez [Github](https://github.com/marcewp15) - [Twitter](https://twitter.com/MarceWp15) - [Linkedin](https://www.linkedin.com/in/lady-marcela-s%C3%A1nchez-moreno-277922184/) 970@holbertonschool.com
+[Github](https://github.com/Juan-Bogota) - [Twitter](https://twitter.com/jclopez100) - [Linkedin](https://www.linkedin.com/in/juan-carlos-lopez-50698369/) 
 
-* Sergio Quiroga [Github](https://github.com/Sergioq7777) - [Twitter](https://twitter.com/sergioq7777) - [Linkedin](https://www.linkedin.com/in/sergio-andr%C3%A9s-quiroga-monroy-49255317b/) 1230@holbertonschool.com
+1213@holbertonschool.com
+
+* Marcela Sánchez
+
+[Github](https://github.com/marcewp15) - [Twitter](https://twitter.com/MarceWp15) - [Linkedin](https://www.linkedin.com/in/lady-marcela-s%C3%A1nchez-moreno-277922184/) 
+
+970@holbertonschool.com
+
+* Sergio Quiroga 
+
+[Github](https://github.com/Sergioq7777) - [Twitter](https://twitter.com/sergioq7777) - [Linkedin](https://www.linkedin.com/in/sergio-andr%C3%A9s-quiroga-monroy-49255317b/) 
+
+1230@holbertonschool.com
