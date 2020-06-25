@@ -10,13 +10,13 @@ Our platform is aimed at technology-related topics and communities, for example,
 
 We connect people through these personalized tutorials and advice, giving them the opportunity to improve and discover their skills in a collaborative community to make their way in the world of technology.
 
-<p align="center"><img src="images/home.jpeg" width="700"></p>
-
 ##  Technology :floppy_disk:
 
 <p align="center"><img src="images/Technology.jpg" width="700"></p>
 
 ## Architecture :rocket:
+
+<p align="center"><img src="images/arq.PNG" width="700"></p>
 
 The architecture in our web page is when the user enters our web page, it will validate that the domain is stored in the DNS servers and it will return an IPV4 so that it redirects to the server where our information is stored but the user can only see the Front End (HTML, CSS, JS [jQuery] ) and Bootstrap as css framework.
 
@@ -139,9 +139,10 @@ PONG
 ```
 - Close Redis with `control` + `c` to quit.
 
-## ARCHITECTURE
+## Features
 
-<p align="center"><img src="images/arq.PNG" width="700"></p>
+<p align="center"><img src="images/home.jpeg" width="700"></p> 
+
 
 ## Contributing :raised_hands:
 
