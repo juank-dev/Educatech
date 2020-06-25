@@ -18,6 +18,14 @@ This project is our final portfolio project, concluding our Foundations year at 
 
 We put a little bit of ourselves into this project so that it can help many people, just as Holberton and learning programming helped us.  ♥️
 
+## Blog post :pencil:
+
+Here we tell you a little more about what we experienced in this adventure by creating Educatech.
+
+* Juan Lopez's blog:
+* Marcela Sánchez's blog:
+* Sergio Quiroga's blog:
+
 ##  Technology :floppy_disk:
 
 <p align="center"><img src="images/Technology.jpg" width="700"></p>
@@ -148,6 +156,8 @@ PONG
 - Close Redis with `control` + `c` to quit.
 
 ## Features :dart:
+
+Here you can find the link of the [landing page](https://educatech-landpage.bss.design/) and the [Educatech](http://www.educatech.tech) domain, in both we show all features created.
 
 * Home page
 
