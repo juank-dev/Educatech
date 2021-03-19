@@ -18,7 +18,7 @@ daphne==2.5.0
 Django==3.0.7
 django-crispy-forms==1.8.1
 django-multiselectfield==0.1.12
-djangorestframework==3.11.0
+djangorestframework==3.11.2
 dnspython==1.16.0
 email-validator==1.1.1
 Flask==1.0.2
